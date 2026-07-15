@@ -3,8 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arya Hosseini — Product Manager & MBA</title>
-  <meta name="description" content="Personal website of Arya Hosseini — UCLA Anderson MBA, product manager, and entrepreneur working across technology and real estate." />
+  <title>Arya Hosseini | Technical Product Manager</title>
+  <meta name="description" content="Personal website of Arya Hosseini, Technical Product Manager and UCLA Anderson MBA building AI-enabled products across robotics, 3D capture, and medical devices." />
+
+  <!-- Social sharing / link previews (Open Graph + Twitter) -->
+  <link rel="canonical" href="https://aryahosseini.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aryahosseini.com/" />
+  <meta property="og:title" content="Arya Hosseini | Technical Product Manager" />
+  <meta property="og:description" content="Technical Product Manager and UCLA Anderson MBA building AI-enabled products across robotics, 3D capture, and medical devices." />
+  <meta property="og:image" content="https://aryahosseini.com/profile.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Arya Hosseini | Technical Product Manager" />
+  <meta name="twitter:description" content="Technical Product Manager and UCLA Anderson MBA building AI-enabled products across robotics, 3D capture, and medical devices." />
+  <meta name="twitter:image" content="https://aryahosseini.com/profile.jpg" />
 
   <!-- Google Font: Inter (clean, modern) + Fraunces (elegant headline serif) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,7 +25,7 @@
 
   <style>
     /* =========================================================
-       DESIGN TOKENS — tweak these to change the look site-wide
+       DESIGN TOKENS: tweak these to change the look site-wide
        ========================================================= */
     :root {
       --bg: #fbfaf7;           /* warm off-white background */
@@ -298,7 +310,6 @@
   <!-- ===================== NAVIGATION ===================== -->
   <nav>
     <div class="nav-inner">
-      <!-- EDIT: change brand name if desired -->
       <a href="#hero" class="brand">Arya Hosseini</a>
       <div class="nav-links">
         <a href="#about">About</a>
@@ -313,20 +324,15 @@
   <section id="hero" class="hero">
     <div class="container reveal">
       <span class="hero-eyebrow">Los Angeles, CA</span>
-      <!-- EDIT: replace headline with your own strong one-liner -->
-      <h1>Building thoughtful products at the intersection of strategy, technology, and people.</h1>
+      <h1>I build products at the intersection of engineering, AI, and real-world customer needs.</h1>
       <p class="lede">
-        I'm Arya — a UCLA Anderson MBA with a mechanical engineering foundation
-        and product management experience across real estate, healthcare,
-        and early-stage technology ventures.
+        Technical product manager with a mechanical engineering foundation and a
+        UCLA Anderson MBA, working across AI-enabled products, robotics,
+        3D capture, and medical devices.
       </p>
       <div class="hero-cta">
-        <!-- EDIT: replace with your own LinkedIn URL and email -->
         <a class="btn btn-primary" href="https://www.linkedin.com/in/aryahosseini" target="_blank" rel="noopener">
-          Connect on LinkedIn →
-        </a>
-        <a class="btn btn-secondary" href="#contact">
-          Get in touch
+          Connect on LinkedIn
         </a>
       </div>
     </div>
@@ -338,33 +344,38 @@
       <div class="eyebrow">About</div>
       <h2>A little about me</h2>
       <div class="about-grid" style="margin-top: 32px;">
-        <!-- Save your headshot as "profile.jpg" in the same folder as this file. -->
         <img src="profile.jpg" alt="Arya Hosseini" class="avatar" />
         <div class="about-text">
           <p>
-            I grew up drawn to how things work — first mechanical systems, then markets,
-            and now products and the teams that build them. After a B.Sc. and M.Sc. in
-            Mechanical Engineering, I spent several years managing product lines in
-            manufacturing and real estate, where I learned that good strategy and clear
-            execution matter as much as good design.
+            I began my career in orthopedic medical devices, progressing from
+            mechanical engineering into product management. I contributed to the
+            design of orthopedic implants, including one that earned a patent,
+            managed product and production activities across roughly 22 products,
+            and worked directly with surgeons and hospitals to translate clinical
+            feedback into product and manufacturing improvements.
           </p>
           <p>
-            I recently earned my MBA from UCLA Anderson and am now working on
-            early-stage ventures in AI-powered real estate (Alimo Architects) and
-            3D capture technology (OpalAi). I care about healthcare innovation,
-            operational excellence, and building companies that pair technical rigor
-            with real human impact.
+            Today I work across two affiliated ventures in Los Angeles. At Alimo
+            Architects, I own end-to-end delivery of 3D property-digitization
+            projects, from client acquisition and on-site LiDAR scanning through
+            final delivery. At OpalAi, an agentic AI startup, I lead field
+            validation of AI-generated outputs against real-world conditions and
+            contribute to product strategy, government and commercial proposals,
+            and fundraising, including a successful $2M NASA contract proposal.
           </p>
           <p>
-            Outside of work, I'm interested in entrepreneurship, real estate investing,
-            and the unglamorous craft of turning rough ideas into shipped things.
+            My technical foundation spans CAD, manufacturing, control systems,
+            robotics, neural networks, Python, and MATLAB. I'm currently exploring
+            Technical Product Manager and Product Manager roles in AI-enabled
+            products, medical devices, robotics, and other technically complex
+            systems across the United States.
           </p>
           <div class="chips">
             <span class="chip">Product Management</span>
-            <span class="chip">Strategy</span>
-            <span class="chip">AI / Generative Tools</span>
-            <span class="chip">Real Estate</span>
-            <span class="chip">Healthcare</span>
+            <span class="chip">AI-Enabled Products</span>
+            <span class="chip">Robotics</span>
+            <span class="chip">Medical Devices</span>
+            <span class="chip">3D Capture / LiDAR</span>
             <span class="chip">Entrepreneurship</span>
           </div>
         </div>
@@ -379,41 +390,29 @@
       <h2>Where I've worked</h2>
       <div class="timeline" style="margin-top: 32px;">
 
-        <!-- EDIT each .job block: dates, title, company, bullets -->
-        <div class="job">
-          <div class="job-date">Nov 2024 — Present</div>
-          <div>
-            <h3>Product Manager</h3>
-            <div class="company">Alimo Architects Inc · Los Angeles, CA</div>
-            <ul>
-              <li>Launched AI-driven tools for website, SEO, and social — improving user experience and online visibility.</li>
-              <li>Built AI-powered analytics for Airbnb, Zillow, and Vrbo listings, enabling dynamic pricing and higher occupancy.</li>
-              <li>Digitized legal and compliance workflows with AI document processing, cutting manual effort and error risk.</li>
-            </ul>
-          </div>
-        </div>
-
         <div class="job">
           <div class="job-date">Jan 2025 — Present</div>
           <div>
-            <h3>Product Strategy Manager</h3>
+            <h3>Product Manager</h3>
             <div class="company">OpalAi · Los Angeles, CA</div>
             <ul>
-              <li>Developed proposals and presentations aligning technical scope with business objectives for external partners.</li>
-              <li>Created fundraising and strategic materials supporting leadership decision-making.</li>
-              <li>Coordinated priorities and deliverables across multiple concurrent projects.</li>
+              <li>Lead field validation for ScanToBIM, an AI-powered 3D property-digitization product, scanning 10+ residential, commercial, educational, and healthcare properties and benchmarking AI-generated floor plans and models against real-world conditions.</li>
+              <li>Own the product defect tracker, validating issues with licensed architects and coordinating resolution across software engineers and a third-party technology partner.</li>
+              <li>Contributed to a successful $2M NASA contract proposal and developed 5+ proposals for government agencies, universities, and partners across products including FireGPT (wildfire prediction) and Urbanomy (street-condition analytics).</li>
+              <li>Supported fundraising with the CEO, researching and contacting 70+ prospective investors, building pitch materials and a presentation website, and organizing the investor data room.</li>
             </ul>
           </div>
         </div>
 
         <div class="job">
-          <div class="job-date">Aug 2023 — Jun 2025</div>
+          <div class="job-date">Nov 2024 — Present</div>
           <div>
-            <h3>Master of Business Administration (MBA)</h3>
-            <div class="company">UCLA Anderson School of Management</div>
+            <h3>Product Manager, Delivery &amp; Operations</h3>
+            <div class="company">Alimo Architects Inc · Los Angeles, CA</div>
             <ul>
-              <li>UCLA Anderson Merit Fellowship recipient.</li>
-              <li>Member, Management Consulting Association &amp; Ander Tech Club.</li>
+              <li>Own end-to-end delivery of 3D property-digitization projects using ScanToBIM, from client acquisition and on-site LiDAR scanning through coordination with architects and engineers, delivering ~15 residential and commercial projects.</li>
+              <li>Re-established the firm's client-acquisition operations with a structured process spanning the company website, Google Ads, HubSpot CRM, email outreach, and LinkedIn content.</li>
+              <li>Manage operations across a portfolio of six to seven properties and led the full renovation of a multifamily luxury property, from contractor negotiation through final delivery.</li>
             </ul>
           </div>
         </div>
@@ -424,21 +423,34 @@
             <h3>Business Strategy Consultant</h3>
             <div class="company">Towhid Elderly Rehabilitation Institute</div>
             <ul>
-              <li>Led facility expansion project projecting a 30% capacity increase and 20% growth in service offerings.</li>
-              <li>Drove 15% operational efficiency gain through cross-functional integration across finance, healthcare, and ops.</li>
+              <li>Led financial and strategic analysis for a proposed facility expansion projected to increase capacity 30%, evaluating property consolidation, acquisition opportunities, renovation costs, and resource requirements.</li>
+              <li>Presented data-driven recommendations to institutional leadership covering financial feasibility, patient flow, staffing, and facility integration.</li>
             </ul>
           </div>
         </div>
 
         <div class="job">
-          <div class="job-date">Sep 2019 — Jun 2023</div>
+          <div class="job-date">Sep 2020 — Jun 2023</div>
           <div>
             <h3>Product Manager</h3>
             <div class="company">Arad Orthopedic Industries</div>
             <ul>
-              <li>Reduced manufacturing costs by 10% through material substitution and process re-engineering.</li>
-              <li>Grew sales 80% via social-media marketing and customized manufacturing contracts.</li>
-              <li>Increased financial resources 50% by pitching strategic goals to investors, enabling a new product line.</li>
+              <li>Managed product and production operations across ~22 orthopedic implant products, leading ~12 production technicians and aligning manufacturing with quality, inventory, and delivery schedules.</li>
+              <li>Worked directly with surgeons and hospitals to translate clinical feedback into product improvements, regulatory documentation, and licensing submissions.</li>
+              <li>Re-engineered a core manufacturing process, replacing a CNC operation with a simplified drilling workflow, reducing production time and unit cost.</li>
+              <li>Negotiated a major hospital order for the foot-implant line through a commission-based partnership, creating the potential to nearly double product-line revenue.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-date">Sep 2019 — Sep 2020</div>
+          <div>
+            <h3>Senior Engineer</h3>
+            <div class="company">Arad Orthopedic Industries</div>
+            <ul>
+              <li>Designed and developed a foot implant from concept through CAD, manufacturing preparation, and national regulatory licensing, earning a patent for the design.</li>
+              <li>Contributed to the design and launch of two additional implants, supporting entry into the facial-implant market.</li>
             </ul>
           </div>
         </div>
@@ -449,9 +461,47 @@
             <h3>Equity Analyst</h3>
             <div class="company">Mofid Securities</div>
             <ul>
-              <li>Cut analysis time 20% by sharpening data manipulation and trend-identification workflows.</li>
-              <li>Improved team productivity 25% through structured planning and weekly cadence.</li>
+              <li>Analyzed company financial statements, equity-market data, and industry trends to support investment research and timely reporting.</li>
+              <li>Led workshops translating fundamental-analysis concepts into practical guidance for team members and participants.</li>
             </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===================== EDUCATION ===================== -->
+      <div class="eyebrow" style="margin-top: 72px;">Education</div>
+      <h2>Where I've studied</h2>
+      <div class="timeline" style="margin-top: 32px;">
+
+        <div class="job">
+          <div class="job-date">Jul 2023 — Jun 2025</div>
+          <div>
+            <h3>Master of Business Administration (MBA)</h3>
+            <div class="company">UCLA Anderson School of Management · Los Angeles, CA</div>
+            <ul>
+              <li>UCLA Anderson Merit Fellowship recipient.</li>
+              <li>Member, Management Consulting Association &amp; Ander Tech Club.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-date">Sep 2019 — Sep 2022</div>
+          <div>
+            <h3>M.Sc., Mechanical Engineering</h3>
+            <div class="company">K. N. Toosi University of Technology</div>
+            <ul>
+              <li>Implemented a control system for a walking-assistance robot for elderly users and developed a fuzzy-logic system for automated vehicle parking.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-date">Sep 2014 — Sep 2018</div>
+          <div>
+            <h3>B.Sc., Mechanical Engineering</h3>
+            <div class="company">Sharif University of Technology</div>
           </div>
         </div>
 
@@ -465,46 +515,44 @@
       <div class="eyebrow">Selected Work</div>
       <h2>Projects I'm proud of</h2>
       <p style="color: var(--muted); max-width: 56ch; margin-bottom: 40px;">
-        A handful of recent projects across AI, real estate, and healthcare strategy.
-        <!-- EDIT: change intro, or remove -->
+        A handful of recent projects across AI, 3D capture, robotics, and medical devices.
       </p>
       <div class="project-grid">
 
-        <!-- EDIT each project card -->
         <article class="project">
-          <div class="project-tag">AI · Real Estate</div>
-          <h3>Alimo Architects — AI Ops Platform</h3>
-          <p>Integrated generative AI into listing management, SEO, and client workflows across Airbnb, Zillow, and Vrbo — lifting occupancy and cutting manual work.</p>
+          <div class="project-tag">AI · 3D Capture</div>
+          <h3>ScanToBIM Field Validation &amp; Product QA</h3>
+          <p>Validated an AI-powered 3D property-digitization product across 10+ real properties, benchmarking AI-generated floor plans and models against real-world conditions to drive product fixes and feature priorities.</p>
         </article>
 
         <article class="project">
-          <div class="project-tag">Product Strategy</div>
-          <h3>OpalAi — Go-to-Market Materials</h3>
-          <p>Built proposals, fundraising decks, and partner documentation for a 3D-capture startup, aligning technical capability with business narrative.</p>
+          <div class="project-tag">AI · Proposals</div>
+          <h3>FireGPT, Urbanomy &amp; a $2M NASA Win</h3>
+          <p>Developed 5+ proposals for government agencies, universities, and partners, spanning AI wildfire prediction and street-condition analytics, and contributed to a successful $2M NASA contract proposal.</p>
         </article>
 
         <article class="project">
-          <div class="project-tag">Healthcare · Strategy</div>
-          <h3>Elderly Care Expansion Plan</h3>
-          <p>Led a financial and operational analysis of a facility merger projecting 30% capacity growth and a 25% improvement in service quality.</p>
+          <div class="project-tag">Medical Devices</div>
+          <h3>Patented Foot Implant</h3>
+          <p>Designed a foot implant from concept through CAD, manufacturing, and national regulatory licensing, earning a design patent and anchoring a hospital deal with potential to nearly double product-line revenue.</p>
         </article>
 
         <article class="project">
-          <div class="project-tag">Manufacturing · Product</div>
-          <h3>Orthopedic Product Line Launch</h3>
-          <p>Took two new medical implants from market research to launch, while cutting production costs 10% and lifting sales 80%.</p>
+          <div class="project-tag">Real Estate · Operations</div>
+          <h3>Alimo Delivery Engine</h3>
+          <p>Rebuilt client acquisition from scratch (Google Ads, HubSpot CRM, outreach) and delivered ~15 LiDAR property-digitization projects end to end, from first inquiry to final architectural deliverables.</p>
+        </article>
+
+        <article class="project">
+          <div class="project-tag">Robotics · Controls</div>
+          <h3>Assistive Robotics Research</h3>
+          <p>Implemented a control system for a walking-assistance robot for elderly users and developed a fuzzy-logic system for automated vehicle parking during graduate study.</p>
         </article>
 
         <article class="project">
           <div class="project-tag">Research</div>
           <h3>Fatigue Life of Composite-Patched Plates</h3>
-          <p>Published experimental and numerical study on cracked aluminum plates reinforced with glass/epoxy composite patches.</p>
-        </article>
-
-        <article class="project">
-          <div class="project-tag">Coming Soon</div>
-          <h3>Your next project here</h3>
-          <p>Placeholder — replace with a new venture, case study, or side project you want to highlight.</p>
+          <p>Published experimental and numerical study on cracked aluminum plates reinforced with glass/epoxy composite patches across different stress ratios.</p>
         </article>
 
       </div>
@@ -517,13 +565,13 @@
       <div class="eyebrow">Contact</div>
       <h2>Let's build something.</h2>
       <p>
-        I'm always open to conversations about product, strategy, healthcare innovation,
-        or early-stage ventures. The best way to reach me is through LinkedIn — I check it regularly and respond to thoughtful messages.
+        I'm always open to conversations about product, AI, robotics, medical
+        devices, or early-stage ventures. The best way to reach me is through
+        LinkedIn. I check it regularly and respond to thoughtful messages.
       </p>
       <div class="contact-buttons">
-        <!-- EDIT: replace with your own LinkedIn URL -->
         <a class="btn btn-primary" href="https://www.linkedin.com/in/aryahosseini" target="_blank" rel="noopener">
-          Message me on LinkedIn →
+          Message me on LinkedIn
         </a>
       </div>
     </div>
@@ -531,7 +579,6 @@
 
   <!-- ===================== FOOTER ===================== -->
   <footer>
-    <!-- EDIT: change the footer copy or year -->
     <div>© <span id="year"></span> Arya Hosseini. Built with care in Los Angeles.</div>
   </footer>
 
