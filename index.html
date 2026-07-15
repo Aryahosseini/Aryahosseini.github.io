@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arya Hosseini | Technical Product Manager</title>
   <meta name="description" content="Personal website of Arya Hosseini, Technical Product Manager and UCLA Anderson MBA building AI-enabled products across robotics, 3D capture, and medical devices." />
+  <meta name="theme-color" content="#0e1116" />
 
   <!-- Social sharing / link previews (Open Graph + Twitter) -->
   <link rel="canonical" href="https://aryahosseini.com/" />
@@ -18,27 +19,34 @@
   <meta name="twitter:description" content="Technical Product Manager and UCLA Anderson MBA building AI-enabled products across robotics, 3D capture, and medical devices." />
   <meta name="twitter:image" content="https://aryahosseini.com/profile.jpg" />
 
-  <!-- Google Font: Inter (clean, modern) + Fraunces (elegant headline serif) -->
+  <!-- Favicon (inline SVG monogram) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e1116'/%3E%3Ctext x='32' y='45' font-family='monospace' font-size='36' fill='%23f0a35e' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Space Grotesk (headings) + Inter (body) + JetBrains Mono (technical details) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <style>
     /* =========================================================
        DESIGN TOKENS: tweak these to change the look site-wide
        ========================================================= */
     :root {
-      --bg: #fbfaf7;           /* warm off-white background */
-      --surface: #ffffff;       /* card / section surface */
-      --ink: #111111;           /* headings + strong text */
-      --text: #2a2a2a;          /* body text */
-      --muted: #6b6b6b;         /* secondary text */
-      --line: #e7e4dc;          /* hairlines / borders */
-      --accent: #b8661f;        /* warm amber accent */
-      --accent-soft: #f4e9dc;   /* accent tint for chips */
+      --bg: #0e1116;            /* near-black blue base */
+      --surface: #151a23;        /* card / panel surface */
+      --ink: #f2f5f9;            /* headings + strong text */
+      --text: #c4cbd6;           /* body text */
+      --muted: #8a92a3;          /* secondary text */
+      --line: #232b38;           /* hairlines / borders */
+      --accent: #f0a35e;         /* warm amber glow */
+      --accent-2: #ffd29b;       /* lighter amber */
+      --accent-soft: rgba(240, 163, 94, 0.10);
+      --accent-border: rgba(240, 163, 94, 0.30);
       --radius: 14px;
       --maxw: 1080px;
-      --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.04);
+      --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.35);
+      --glow: 0 0 0 1px var(--accent-border), 0 8px 32px rgba(240, 163, 94, 0.12);
+      --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
     }
 
     /* ---------- Base ---------- */
@@ -48,27 +56,33 @@
       margin: 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 17px;
-      line-height: 1.65;
+      line-height: 1.7;
       color: var(--text);
-      background: var(--bg);
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+      background-size: 44px 44px;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
 
+    ::selection { background: rgba(240,163,94,0.30); color: var(--ink); }
+
     h1, h2, h3 {
-      font-family: 'Fraunces', Georgia, serif;
+      font-family: 'Space Grotesk', 'Inter', sans-serif;
       color: var(--ink);
-      font-weight: 500;
-      letter-spacing: -0.01em;
-      line-height: 1.2;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
       margin: 0 0 0.6em;
     }
-    h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); }
-    h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin-top: 0; }
-    h3 { font-size: 1.2rem; font-family: 'Inter', sans-serif; font-weight: 600; }
+    h1 { font-size: clamp(2.5rem, 5.5vw, 4rem); }
+    h2 { font-size: clamp(1.7rem, 3.5vw, 2.3rem); margin-top: 0; }
+    h3 { font-size: 1.15rem; font-weight: 600; letter-spacing: -0.01em; }
     p  { margin: 0 0 1em; }
     a  { color: var(--accent); text-decoration: none; transition: opacity .2s ease; }
-    a:hover { opacity: 0.75; }
+    a:hover { opacity: 0.8; }
 
     .container {
       max-width: var(--maxw);
@@ -77,18 +91,29 @@
     }
 
     section {
-      padding: 96px 0;
+      padding: 100px 0;
       border-top: 1px solid var(--line);
+      scroll-margin-top: 64px;
     }
     section:first-of-type { border-top: none; }
 
     .eyebrow {
-      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--mono);
+      font-size: 0.78rem;
       font-weight: 500;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+    }
+    .eyebrow::after {
+      content: "";
+      width: 48px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent), transparent);
     }
 
     /* ---------- Navigation ---------- */
@@ -96,35 +121,89 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(251, 250, 247, 0.85);
-      backdrop-filter: saturate(180%) blur(12px);
-      -webkit-backdrop-filter: saturate(180%) blur(12px);
+      background: rgba(14, 17, 22, 0.82);
+      backdrop-filter: saturate(160%) blur(14px);
+      -webkit-backdrop-filter: saturate(160%) blur(14px);
       border-bottom: 1px solid var(--line);
     }
     .nav-inner {
       max-width: var(--maxw);
       margin: 0 auto;
-      padding: 16px 24px;
+      padding: 15px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
     .brand {
-      font-family: 'Fraunces', Georgia, serif;
+      font-family: var(--mono);
       font-weight: 500;
-      font-size: 1.1rem;
+      font-size: 0.98rem;
       color: var(--ink);
-      letter-spacing: -0.01em;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
     }
-    .nav-links { display: flex; gap: 28px; }
+    .brand::before {
+      content: "A";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+    .nav-links { display: flex; gap: 26px; align-items: center; }
     .nav-links a {
       color: var(--text);
-      font-size: 0.92rem;
-      font-weight: 500;
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      font-weight: 400;
+      position: relative;
+      padding: 4px 0;
+    }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 100%;
+      bottom: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: right .25s ease;
     }
     .nav-links a:hover { color: var(--accent); opacity: 1; }
+    .nav-links a:hover::after { right: 0; }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 10px;
+      cursor: pointer;
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1;
+    }
     @media (max-width: 640px) {
-      .nav-links { display: none; }
+      .nav-toggle { display: inline-flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--line);
+        padding: 8px 0;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 24px; width: 100%; }
+      .nav-links a::after { display: none; }
     }
 
     /* ---------- Buttons ---------- */
@@ -132,57 +211,122 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 12px 22px;
-      border-radius: 999px;
+      padding: 13px 26px;
+      border-radius: 10px;
+      font-family: var(--mono);
       font-weight: 500;
-      font-size: 0.95rem;
+      font-size: 0.88rem;
       transition: all .2s ease;
       cursor: pointer;
       border: 1px solid transparent;
     }
     .btn-primary {
-      background: var(--ink);
-      color: #fff;
+      background: var(--accent);
+      color: #16100a;
+      box-shadow: 0 8px 28px rgba(240, 163, 94, 0.22);
     }
-    .btn-primary:hover { background: var(--accent); opacity: 1; }
+    .btn-primary:hover {
+      background: var(--accent-2);
+      opacity: 1;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 36px rgba(240, 163, 94, 0.32);
+    }
     .btn-secondary {
       background: transparent;
       color: var(--ink);
-      border-color: var(--ink);
+      border-color: var(--line);
     }
-    .btn-secondary:hover { background: var(--ink); color: #fff; opacity: 1; }
+    .btn-secondary:hover { border-color: var(--accent); color: var(--accent); opacity: 1; }
 
     /* ---------- Hero ---------- */
-    #hero { padding: 120px 0 96px; border-top: none; }
+    #hero {
+      padding: 130px 0 100px;
+      border-top: none;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: "";
+      position: absolute;
+      top: -260px;
+      right: -160px;
+      width: 620px;
+      height: 620px;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, rgba(240,163,94,0.13) 0%, rgba(240,163,94,0.05) 40%, transparent 70%);
+      pointer-events: none;
+    }
+    #hero .container { position: relative; }
     .hero-eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
+      gap: 9px;
+      padding: 7px 16px;
       border-radius: 999px;
       background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
       color: var(--accent);
-      font-size: 0.82rem;
+      font-family: var(--mono);
+      font-size: 0.78rem;
       font-weight: 500;
-      margin-bottom: 24px;
+      letter-spacing: 0.05em;
+      margin-bottom: 28px;
     }
     .hero-eyebrow::before {
       content: "";
-      width: 6px; height: 6px;
+      width: 7px; height: 7px;
       border-radius: 50%;
-      background: var(--accent);
+      background: #6ee7a0;
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(110,231,160,0.4); }
+      50% { box-shadow: 0 0 0 6px rgba(110,231,160,0); }
     }
     .hero h1 {
-      max-width: 18ch;
-      margin-bottom: 20px;
+      max-width: 21ch;
+      margin-bottom: 22px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+      text-shadow: 0 0 28px rgba(240,163,94,0.35);
     }
     .hero .lede {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: var(--muted);
-      max-width: 56ch;
-      margin-bottom: 36px;
+      max-width: 58ch;
+      margin-bottom: 38px;
     }
     .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      gap: 48px;
+      margin-top: 64px;
+      padding-top: 36px;
+      border-top: 1px solid var(--line);
+      width: fit-content;
+    }
+    .stat-value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: var(--accent);
+      line-height: 1.1;
+    }
+    .stat-label {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.03em;
+      color: var(--muted);
+      margin-top: 6px;
+      max-width: 16ch;
+    }
+    @media (max-width: 720px) {
+      .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 28px; width: 100%; }
+    }
 
     /* ---------- About ---------- */
     .about-grid {
@@ -191,14 +335,28 @@
       gap: 56px;
       align-items: start;
     }
+    .avatar-wrap { position: relative; }
+    .avatar-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 14px -14px -14px 14px;
+      border-radius: var(--radius);
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      z-index: 0;
+    }
     .avatar {
+      position: relative;
+      z-index: 1;
       width: 100%;
       aspect-ratio: 1;
       border-radius: var(--radius);
       object-fit: cover;
       object-position: center top;
       display: block;
+      border: 1px solid var(--line);
       box-shadow: var(--shadow);
+      filter: saturate(0.95);
     }
     .about-text p { color: var(--text); }
     .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
@@ -206,30 +364,70 @@
       background: var(--surface);
       border: 1px solid var(--line);
       color: var(--text);
-      padding: 6px 12px;
-      border-radius: 999px;
-      font-size: 0.85rem;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      transition: all .2s ease;
+    }
+    .chip:hover {
+      border-color: var(--accent-border);
+      background: var(--accent-soft);
+      color: var(--accent);
     }
     @media (max-width: 720px) {
-      .about-grid { grid-template-columns: 1fr; gap: 32px; }
-      .avatar { max-width: 220px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .avatar-wrap { max-width: 220px; }
     }
 
     /* ---------- Experience (timeline) ---------- */
-    .timeline { display: flex; flex-direction: column; gap: 28px; }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding-left: 28px;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 36px;
+      bottom: 30px;
+      width: 1px;
+      background: var(--line);
+    }
     .job {
       display: grid;
-      grid-template-columns: 180px 1fr;
+      grid-template-columns: 175px 1fr;
       gap: 24px;
-      padding: 24px 0;
+      padding: 26px 0;
       border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    .job::before {
+      content: "";
+      position: absolute;
+      left: -28px;
+      top: 36px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-soft), 0 0 12px rgba(240,163,94,0.5);
     }
     .job:last-child { border-bottom: none; }
-    .job-date { color: var(--muted); font-size: 0.9rem; }
+    .job-date {
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      padding-top: 5px;
+      letter-spacing: 0.02em;
+    }
     .job h3 { margin: 0 0 4px; }
     .job .company {
-      font-size: 0.95rem;
-      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--accent);
       margin-bottom: 10px;
     }
     .job ul {
@@ -237,7 +435,8 @@
       padding-left: 20px;
       color: var(--text);
     }
-    .job li { margin-bottom: 6px; }
+    .job li { margin-bottom: 7px; }
+    .job li::marker { color: var(--accent); }
     @media (max-width: 720px) {
       .job { grid-template-columns: 1fr; gap: 6px; }
     }
@@ -253,54 +452,98 @@
       border: 1px solid var(--line);
       border-radius: var(--radius);
       padding: 28px;
-      transition: transform .25s ease, box-shadow .25s ease;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .project::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity .25s ease;
     }
     .project:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow);
+      transform: translateY(-5px);
+      border-color: var(--accent-border);
+      box-shadow: var(--glow);
     }
+    .project:hover::before { opacity: 1; }
     .project-tag {
       display: inline-block;
-      font-size: 0.75rem;
+      font-family: var(--mono);
+      font-size: 0.68rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 10px;
+      font-weight: 500;
+      margin-bottom: 14px;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      padding: 4px 10px;
+      border-radius: 6px;
     }
     .project h3 { margin-bottom: 8px; }
-    .project p { color: var(--muted); font-size: 0.95rem; margin-bottom: 0; }
+    .project p { color: var(--muted); font-size: 0.94rem; margin-bottom: 0; }
 
     /* ---------- Contact ---------- */
-    #contact { text-align: center; padding-bottom: 120px; }
+    #contact { text-align: center; padding-bottom: 130px; position: relative; overflow: hidden; }
+    #contact::before {
+      content: "";
+      position: absolute;
+      bottom: -320px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 680px;
+      height: 680px;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, rgba(240,163,94,0.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    #contact .container { position: relative; }
+    #contact .eyebrow { justify-content: center; }
+    #contact .eyebrow::after { display: none; }
     #contact p { color: var(--muted); max-width: 52ch; margin: 0 auto 32px; }
     .contact-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
     /* ---------- Footer ---------- */
     footer {
       border-top: 1px solid var(--line);
-      padding: 32px 24px;
+      padding: 36px 24px;
       text-align: center;
       color: var(--muted);
-      font-size: 0.88rem;
+      font-family: var(--mono);
+      font-size: 0.78rem;
     }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 14px;
+    }
+    .footer-links a { color: var(--muted); }
+    .footer-links a:hover { color: var(--accent); opacity: 1; }
 
     /* ---------- Scroll animations ---------- */
     .reveal {
       opacity: 0;
-      transform: translateY(16px);
+      transform: translateY(18px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
     .reveal.visible {
       opacity: 1;
       transform: none;
     }
+    .project.reveal { transition-delay: var(--d, 0s); }
 
     /* Respect users who prefer reduced motion */
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       .reveal { opacity: 1; transform: none; transition: none; }
       .project { transition: none; }
+      .hero-eyebrow::before { animation: none; }
     }
   </style>
 </head>
@@ -310,12 +553,13 @@
   <!-- ===================== NAVIGATION ===================== -->
   <nav>
     <div class="nav-inner">
-      <a href="#hero" class="brand">Arya Hosseini</a>
+      <a href="#hero" class="brand">arya.hosseini</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
       <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">about</a>
+        <a href="#experience">experience</a>
+        <a href="#projects">projects</a>
+        <a href="#contact">contact</a>
       </div>
     </div>
   </nav>
@@ -324,7 +568,7 @@
   <section id="hero" class="hero">
     <div class="container reveal">
       <span class="hero-eyebrow">Los Angeles, CA</span>
-      <h1>I build products at the intersection of engineering, AI, and real-world customer needs.</h1>
+      <h1>I build products at the intersection of <em>engineering</em>, <em>AI</em>, and real-world customer needs.</h1>
       <p class="lede">
         Technical product manager with a mechanical engineering foundation and a
         UCLA Anderson MBA, working across AI-enabled products, robotics,
@@ -335,6 +579,24 @@
           Connect on LinkedIn
         </a>
       </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-value">$2M</div>
+          <div class="stat-label">NASA contract proposal</div>
+        </div>
+        <div>
+          <div class="stat-value">15+</div>
+          <div class="stat-label">digitization projects delivered</div>
+        </div>
+        <div>
+          <div class="stat-value">22</div>
+          <div class="stat-label">implant products managed</div>
+        </div>
+        <div>
+          <div class="stat-value">1</div>
+          <div class="stat-label">patented medical device</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -344,7 +606,9 @@
       <div class="eyebrow">About</div>
       <h2>A little about me</h2>
       <div class="about-grid" style="margin-top: 32px;">
-        <img src="profile.jpg" alt="Arya Hosseini" class="avatar" />
+        <div class="avatar-wrap">
+          <img src="profile.jpg" alt="Arya Hosseini" class="avatar" />
+        </div>
         <div class="about-text">
           <p>
             I began my career in orthopedic medical devices, progressing from
@@ -527,37 +791,37 @@
       </p>
       <div class="project-grid">
 
-        <article class="project">
+        <article class="project reveal" style="--d: 0s;">
           <div class="project-tag">AI · 3D Capture</div>
           <h3>ScanToBIM Field Validation &amp; Product QA</h3>
           <p>Validated an AI-powered 3D property-digitization product across 10+ real properties, benchmarking AI-generated floor plans and models against real-world conditions to drive product fixes and feature priorities.</p>
         </article>
 
-        <article class="project">
+        <article class="project reveal" style="--d: 0.08s;">
           <div class="project-tag">AI · Proposals</div>
           <h3>FireGPT, Urbanomy &amp; a $2M NASA Win</h3>
           <p>Developed 5+ proposals for government agencies, universities, and partners, spanning AI wildfire prediction and street-condition analytics, and contributed to a successful $2M NASA contract proposal.</p>
         </article>
 
-        <article class="project">
+        <article class="project reveal" style="--d: 0.16s;">
           <div class="project-tag">Medical Devices</div>
           <h3>Patented Foot Implant</h3>
           <p>Designed a foot implant from concept through CAD, manufacturing, and national regulatory licensing, earning a design patent and anchoring a hospital deal with potential to nearly double product-line revenue.</p>
         </article>
 
-        <article class="project">
+        <article class="project reveal" style="--d: 0s;">
           <div class="project-tag">Real Estate · Operations</div>
           <h3>Alimo Delivery Engine</h3>
           <p>Rebuilt client acquisition from scratch (Google Ads, HubSpot CRM, outreach) and delivered ~15 LiDAR property-digitization projects end to end, from first inquiry to final architectural deliverables.</p>
         </article>
 
-        <article class="project">
+        <article class="project reveal" style="--d: 0.08s;">
           <div class="project-tag">Robotics · Controls</div>
           <h3>Assistive Robotics Research</h3>
           <p>Developed the control system for RoboWalk, a walking-assistance robot for elderly users, and built a fuzzy-logic system for automated vehicle parking during graduate study.</p>
         </article>
 
-        <article class="project">
+        <article class="project reveal" style="--d: 0.16s;">
           <div class="project-tag">Research</div>
           <h3>Fatigue Life of Composite-Patched Plates</h3>
           <p>Published experimental and numerical study on cracked aluminum plates reinforced with glass/epoxy composite patches across different stress ratios.</p>
@@ -587,12 +851,32 @@
 
   <!-- ===================== FOOTER ===================== -->
   <footer>
-    <div>© <span id="year"></span> Arya Hosseini. Built with care in Los Angeles.</div>
+    <div class="footer-links">
+      <a href="#about">about</a>
+      <a href="#experience">experience</a>
+      <a href="#projects">projects</a>
+      <a href="https://www.linkedin.com/in/aryahosseini" target="_blank" rel="noopener">linkedin</a>
+    </div>
+    <div>© <span id="year"></span> Arya Hosseini. Built in Los Angeles.</div>
   </footer>
 
   <script>
     // Auto-update footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    links.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
 
     // Subtle fade-in on scroll (IntersectionObserver)
     const reveals = document.querySelectorAll('.reveal');
