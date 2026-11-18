@@ -488,6 +488,54 @@
     .project h3 { margin-bottom: 8px; }
     .project p { color: var(--muted); font-size: 0.94rem; margin-bottom: 0; }
 
+    /* ---------- Research & publications ---------- */
+    .research-group { margin-top: 44px; }
+    .research-group:first-of-type { margin-top: 36px; }
+    .group-label {
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .thesis {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-left: 2px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+    .thesis h3 { margin-bottom: 4px; }
+    .thesis .meta {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+    .thesis p { color: var(--muted); font-size: 0.96rem; margin-bottom: 0; }
+    .ref-list { list-style: none; margin: 0; padding: 0; }
+    .ref-list li {
+      padding: 18px 0 18px 22px;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    .ref-list li:first-child { border-top: 1px solid var(--line); }
+    .ref-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 28px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .ref-title { color: var(--ink); font-weight: 500; line-height: 1.5; }
+    .ref-meta { color: var(--muted); font-size: 0.9rem; margin-top: 3px; }
+    .ref-meta i { color: var(--text); }
+    .ref-meta .me { color: var(--text); font-weight: 600; }
+
     /* ---------- Contact ---------- */
     #contact { text-align: center; padding-bottom: 130px; position: relative; overflow: hidden; }
     #contact::before {
@@ -559,6 +607,7 @@
         <a href="#about">about</a>
         <a href="#experience">experience</a>
         <a href="#projects">projects</a>
+        <a href="#research">research</a>
         <a href="#contact">contact</a>
       </div>
     </div>
@@ -827,6 +876,66 @@
     </div>
   </section>
 
+  <!-- ===================== RESEARCH & PUBLICATIONS ===================== -->
+  <section id="research">
+    <div class="container reveal">
+      <div class="eyebrow">Research</div>
+      <h2>Research &amp; publications</h2>
+      <p style="color: var(--muted); max-width: 60ch; margin-bottom: 0;">
+        Control of wearable robots, structural mechanics, and decision-making
+        under uncertainty.
+      </p>
+
+      <div class="research-group">
+        <div class="group-label">Thesis</div>
+        <div class="thesis">
+          <h3>Impedance Control for a Lower-Limb Wearable Robot</h3>
+          <div class="meta">M.Sc. thesis · K. N. Toosi University of Technology · Adviser: Prof. S. Ali A. Moosavian</div>
+          <p>
+            Applied multiple impedance control to RoboWalk, a two-legged
+            walking-assistance robot. I derived the robot's dynamic model in
+            MATLAB and designed a controller that carries about a third of the
+            user's body weight, with compliant seat contact and soft swing-foot
+            landing. In OpenSim gait simulation it lowered the ground reaction
+            force on the user by about 20%.
+          </p>
+        </div>
+      </div>
+
+      <div class="research-group">
+        <div class="group-label">Publications</div>
+        <ul class="ref-list">
+          <li>
+            <div class="ref-title">Fatigue life of cracked Al plates reinforced by glass/epoxy composite patches</div>
+            <div class="ref-meta">K. Hosseini, et al., <span class="me">A. Hosseini</span> · <i>Mechanics Based Design of Structures and Machines</i>, 2021</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="research-group">
+        <div class="group-label">Ongoing research</div>
+        <ul class="ref-list">
+          <li>
+            <div class="ref-title">Learning-based gain tuning for impedance control</div>
+            <div class="ref-meta">Extending the thesis controller so a learned model selects the impedance gains as conditions change</div>
+          </li>
+          <li>
+            <div class="ref-title">Strategic selection of sustainable construction contractors under uncertainty</div>
+            <div class="ref-meta">Multi-criteria decision-making: SBSC, grey AHP and MGRA</div>
+          </li>
+          <li>
+            <div class="ref-title">Managing risks of sustainable construction projects under a neutrosophic environment</div>
+            <div class="ref-meta">Risk assessment under uncertainty</div>
+          </li>
+          <li>
+            <div class="ref-title">Barriers to metaverse technology adoption in sustainable supply chains</div>
+            <div class="ref-meta">Technology adoption in operations and supply chains</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== CONTACT ===================== -->
   <section id="contact">
     <div class="container reveal">
@@ -851,6 +960,7 @@
       <a href="#about">about</a>
       <a href="#experience">experience</a>
       <a href="#projects">projects</a>
+      <a href="#research">research</a>
       <a href="https://www.linkedin.com/in/aryahosseini" target="_blank" rel="noopener">linkedin</a>
     </div>
     <div>© <span id="year"></span> Arya Hosseini. Built in Los Angeles.</div>
